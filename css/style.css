@@ -98,6 +98,10 @@ body {
   border: 1px solid #f4b3b3;
 }
 
+.heading_container p {
+  font-size: 18px;
+}
+
 /* Base para elementos con data-title */
 [data-title] {
   position: relative;
@@ -296,9 +300,22 @@ body {
   transition: 0.5s;
 }
 
-#articles {
-  padding-top: 50vh;
+#articles,
+#videos,
+#podcasts {
+  padding-top: 30vh;
 }
+
+#socials {
+  padding-top: 80vh;
+}
+
+.about-text {
+  font-size: 18px;
+  margin-right: 10px;
+  padding-bottom: 2vh;
+}
+
 
 .overlay .closebtn {
   position: absolute;
@@ -736,10 +753,11 @@ a:focus {
 
 .about_section .img-box .about-img {
   width: 100%;
-  -webkit-transform: rotate(-25deg);
-          transform: rotate(-25deg);
-  -webkit-animation: hueAnimate .7s infinite;
-          animation: hueAnimate .7s infinite;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  padding-top:6vh;
+ /*  -webkit-animation: hueAnimate .7s infinite;
+          animation: hueAnimate .7s infinite; */
 }
 
 .about_section .btn-box {
@@ -1267,4 +1285,58 @@ a:focus {
   color: #fff;
   opacity: 1;
 }
-/*# sourceMappingURL=style.css.map */
+
+#socials .carousel {
+  position: relative;
+  top: -110px; /* Ajusta este valor para mover hacia arriba */
+}
+
+/* Estilos para las flechas del carrusel en la sección de podcasts */
+.blog_section .carousel-control-prev,
+.blog_section .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  opacity: 1;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  border-radius: 5px;
+  transform: translateY(-50%);
+}
+
+.blog_section .carousel-control-prev:hover,
+.blog_section .carousel-control-next:hover {
+  background-color: #6e1313;
+}
+
+.blog_section .carousel-control-prev {
+  background-image: url(../images/prev-arrow.png);
+  left: -25px;
+}
+
+.blog_section .carousel-control-next {
+  background-image: url(../images/next-arrow.png);  
+  right: -25px;
+}
+
+/* Para usar el mismo estilo de imagen circular */
+.blog_section .client_content-box .img-box {
+  width: 125px;
+  border-radius: 100%;
+  margin-bottom: -62px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog_section .client_content-box .img-box img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/* Para que la tarjeta tenga el mismo borde redondeado */
+.blog_section .client_content-box {
+  border-radius: 35px;
+  background-color: #ffffff;
+}
