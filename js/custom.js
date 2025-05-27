@@ -14,28 +14,125 @@ function getCurrentYear() {
     document.querySelector("#displayYear").innerHTML = currentYear;
 }
 
-getCurrentYear();
+// SOLUCIÓN: Reemplazar el código del carrusel en custom.js
 
-// carousel indicator style
-var liOne = $(".slider_section .carousel-indicators li.li_one");
-var litwo = $(".slider_section .carousel-indicators li.li_two")
-var ulAfter = $(".slider_section .carousel-indicators .ol_design")
-
-$('#carouselExampleIndicators').on('slid.bs.carousel', function (event) {
-    if (liOne.hasClass("active")) {
-        // ulAfter.css("left", "calc(100% + ' + 35+ 'px)")
-        ulAfter.css({
-            'left': 'calc(0% + ' + 35 + 'px)'
-        })
-
-    } else if (litwo.hasClass("active")) {
-        // ulAfter.css("left", "calc(100% - ' + 35+ 'px)")
-        ulAfter.css({
-            'left': 'calc(100% - ' + 45 + 'px)'
-        })
+// Código mejorado para el indicador del carrusel
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Variables para los elementos del carrusel
+    var liOne = $(".slider_section .carousel-indicators li.li_one");
+    var liTwo = $(".slider_section .carousel-indicators li.li_two");
+    var ulAfter = $(".slider_section .carousel-indicators .ol_design");
+    
+    console.log("Elementos encontrados:", {
+        liOne: liOne.length,
+        liTwo: liTwo.length,
+        ulAfter: ulAfter.length
+    });
+    
+    // Función para mover el indicador
+    function moveIndicator() {
+        if (liOne.hasClass("active")) {
+            console.log("Moviendo a posición 1");
+            ulAfter.css({
+                'left': 'calc(0% + 35px)',
+                'transition': 'left 0.3s ease'
+            });
+        } else if (liTwo.hasClass("active")) {
+            console.log("Moviendo a posición 2");
+            ulAfter.css({
+                'left': 'calc(100% - 45px)',
+                'transition': 'left 0.3s ease'
+            });
+        }
     }
+    
+    // Event listener mejorado para el carrusel
+    $('#carouselExampleIndicators').on('slid.bs.carousel', function (event) {
+        console.log("Carrusel cambió de slide");
+        moveIndicator();
+    });
+    
+    // También escuchar el evento slide (antes de completar la transición)
+    $('#carouselExampleIndicators').on('slide.bs.carousel', function (event) {
+        console.log("Carrusel iniciando cambio");
+        // Pequeño delay para que los elementos active se actualicen
+        setTimeout(moveIndicator, 100);
+    });
+    
+    // Event listeners para los indicadores clickeables
+    liOne.on('click', function() {
+        console.log("Click en indicador 1");
+        setTimeout(moveIndicator, 150);
+    });
+    
+    liTwo.on('click', function() {
+        console.log("Click en indicador 2");
+        setTimeout(moveIndicator, 150);
+    });
+    
+    // Inicializar posición correcta al cargar
+    setTimeout(function() {
+        moveIndicator();
+    }, 500);
+    
+    // Fallback: verificar cada segundo si la posición es correcta
+    setInterval(function() {
+        if (liOne.hasClass("active") && !ulAfter.hasClass("position-1")) {
+            ulAfter.addClass("position-1").removeClass("position-2");
+            moveIndicator();
+        } else if (liTwo.hasClass("active") && !ulAfter.hasClass("position-2")) {
+            ulAfter.addClass("position-2").removeClass("position-1");
+            moveIndicator();
+        }
+    }, 1000);
 });
 
+// Función alternativa usando JavaScript puro (si jQuery falla)
+function initCarouselIndicatorPure() {
+    const carouselElement = document.getElementById('carouselExampleIndicators');
+    const liOne = document.querySelector('.slider_section .carousel-indicators li.li_one');
+    const liTwo = document.querySelector('.slider_section .carousel-indicators li.li_two');
+    const ulAfter = document.querySelector('.slider_section .carousel-indicators .ol_design');
+    
+    if (!carouselElement || !liOne || !liTwo || !ulAfter) {
+        console.error('Elementos del carrusel no encontrados');
+        return;
+    }
+    
+    function updateIndicatorPosition() {
+        if (liOne.classList.contains('active')) {
+            ulAfter.style.left = 'calc(0% + 35px)';
+            ulAfter.style.transition = 'left 0.5s ease';
+        } else if (liTwo.classList.contains('active')) {
+            ulAfter.style.left = 'calc(100% - 45px)';
+            ulAfter.style.transition = 'left 0.5s ease';
+        }
+    }
+    
+    // Usar MutationObserver para detectar cambios en las clases
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                updateIndicatorPosition();
+            }
+        });
+    });
+    
+    // Observar cambios en los indicadores
+    observer.observe(liOne, { attributes: true });
+    observer.observe(liTwo, { attributes: true });
+    
+    // Event listeners para clicks
+    liOne.addEventListener('click', () => setTimeout(updateIndicatorPosition, 100));
+    liTwo.addEventListener('click', () => setTimeout(updateIndicatorPosition, 100));
+    
+    // Inicializar
+    updateIndicatorPosition();
+}
+
+// Ejecutar la función alternativa como backup
+setTimeout(initCarouselIndicatorPure, 1000);
 // JavaScript para los carruseles de artículos
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar el primer carrusel con intervalos más largos
