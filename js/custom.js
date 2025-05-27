@@ -99,3 +99,143 @@ document.addEventListener('DOMContentLoaded', function() {
       equalizeCardHeights();
     });
   });
+ // Modal de Contacto - JavaScript Refactorizado
+function openContactModal(event) {
+    if (event) event.preventDefault();
+    const contactModal = document.getElementById('contactModal');
+    contactModal.classList.add('contact-show');
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = '15px';
+}
+
+// JavaScript mejorado para cerrar modal sin conflictos
+function closeContactModal(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.classList.remove('contact-show');
+    }
+    
+    // Solución simple: remover todos los estilos inline
+    document.body.removeAttribute('style');
+    
+    return false;
+}
+
+
+// Función para manejar el envío del formulario
+function handleContactFormSubmit(event) {
+    event.preventDefault(); // Evita el envío normal del formulario
+    
+    const form = event.target;
+    const submitButton = form.querySelector('.contact-submit-button');
+    const originalText = submitButton.textContent;
+    
+    // Cambiar el botón a estado de "enviando"
+    submitButton.textContent = 'ENVIANDO...';
+    submitButton.disabled = true;
+    submitButton.style.opacity = '0.7';
+    
+    // Crear FormData para enviar
+    const formData = new FormData(form);
+    
+    // Enviar con fetch
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Éxito - mostrar mensaje y limpiar formulario
+            showContactSuccess();
+            form.reset();
+        } else {
+            throw new Error('Error en el envío');
+        }
+    })
+    .catch(error => {
+        // Error - mostrar mensaje de error
+        showContactError();
+        console.error('Error:', error);
+    })
+    .finally(() => {
+        // Restaurar el botón
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+        submitButton.style.opacity = '1';
+    });
+}
+
+// Función para mostrar mensaje de éxito
+function showContactSuccess() {
+    const modalBody = document.querySelector('.contact-modal-body');
+    const successMessage = `
+        <div class="contact-success-message">
+            <div class="success-icon">✓</div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por contactarme. Te responderé pronto.</p>
+            <button onclick="closeContactModal()" class="contact-submit-button" style="margin-top: 20px;">
+                Cerrar
+            </button>
+        </div>
+    `;
+    modalBody.innerHTML = successMessage;
+}
+
+// Función para mostrar mensaje de error
+function showContactError() {
+    const submitButton = document.querySelector('.contact-submit-button');
+    const originalText = submitButton.textContent;
+    
+    submitButton.textContent = 'ERROR - INTÉNTALO DE NUEVO';
+    submitButton.style.backgroundColor = '#d32f2f';
+    
+    setTimeout(() => {
+        submitButton.textContent = originalText;
+        submitButton.style.backgroundColor = '#6e1313';
+    }, 3000);
+}
+
+// Event listeners para el modal de contacto (solo si existe)
+document.addEventListener('DOMContentLoaded', function() {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        // Cerrar con clic fuera
+        contactModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeContactModal();
+            }
+        });
+        
+        // Cerrar con Escape - Solo si no hay otros modales abiertos
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Verificar si el modal de contacto está abierto
+                if (contactModal.classList.contains('contact-show')) {
+                    closeContactModal();
+                }
+            }
+        });
+        
+        // Prevenir cierre al clic dentro del contenido
+        const contactModalContent = contactModal.querySelector('.contact-modal-content');
+        if (contactModalContent) {
+            contactModalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+        
+        // Manejar el envío del formulario
+        const contactForm = contactModal.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleContactFormSubmit);
+        }
+    }
+});

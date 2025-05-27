@@ -73,6 +73,9 @@
               <img src="images/mari-logo1500.png" class="home-button">
             </a>
             <div class="user_option">
+              <a href="#" onclick="openContactModal(event)" data-title="Contactar">
+                    <i class="fa fa-envelope" style="font-size: 25px"></i>
+                </a>
               <a href="Mariangel_Barra_CV.pdf" data-title="cv" download>
                 <i class="fa fa-download" style="font-size:25px"></i>
               </a>
@@ -187,11 +190,6 @@
       </div>
     </div>
     <div class="img-box">
-      <div class="play_btn">
-        <a href="#">
-          <img src="images/play.png" alt="" />
-        </a>
-      </div>
       <img src="images/about-img.png" class="about-img" alt="" style="z-index:3" />
     </div>
   </section>
@@ -426,6 +424,97 @@
     </div>
   </section>
 
+  <section id="articles" class="blog_section layout_padding">
+    <div class="container">
+    </div>
+    <div class="blog_container">
+      <div class="blog_bg">
+        <img src="images/gallery-bg.png" alt="" />
+      </div>
+      <div class="container">
+        <div class="blog_box">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="https://www.zgrados.com/el-desafio-de-la-inclusion-laboral-en-teruel/" 
+              target="_blank" rel="noreferrer noopener">
+                <div class="box b1">
+                  <div class="img-box">
+                    <img src="images/atadi/at-portada.jpg" alt="Represión y Censura en Venezuela" />
+                  </div>
+                  <div class="blog-detail">
+                    <div class="blog_title">
+                      <h5>
+                        El desafío de la inclusión laboral en Teruel
+                      </h5>
+                      <div class="blog_post">
+                        <h6>
+                          Publicado por: Zero Grados
+                        </h6>
+                        <h6>
+                          13-04-2025
+                        </h6>
+                      </div>
+                    </div>
+                    <p>
+                      La inserción laboral de personas con discapacidad muestra qué tan inclusiva es nuestra sociedad. La falta de oportunidades se debe a los múltiples problemas de empleo que encontramos en nuestro país, sumado al rechazo social que estas personas sufren, a la falta de adaptabilidad en su lugar de trabajo e incluso a los programas de empleo poco especializados. 
+                    </p>
+                    <a href="https://www.zgrados.com/el-desafio-de-la-inclusion-laboral-en-teruel/" class="read-more-btn" target="_blank" rel="noreferrer noopener">
+                      Leer más
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="col-md-6">
+              <a href="https://erialediciones.com/revista19/Crisis_19.pdf#page=115" target="_blank" rel="noreferrer noopener">
+                <div class="box b2">
+                  <div class="img-box">
+                    <img src="images/articulos/normalidad.webp" alt="Protestas por la Libertad en Venezuela" />
+                  </div>
+                  <div class="blog-detail">
+                    <div class="blog_title">
+                      <h5>
+                        La normalidad en términos femeninos
+                      </h5>
+                      <div class="blog_post">
+                        <h6>
+                          Publicado por: Revista Crisis (Pág. 115)
+                        </h6>
+                        <h6>
+                          06-2021
+                        </h6>
+                      </div>
+                    </div>
+                    <p>
+                      Normalidad no es ni debe ser sentirse intimidada al salir sola de noche;
+normalidad no es ni debe ser sacar las
+llaves de la casa dos manzanas antes;
+tampoco es que le pidan pruebas a
+una víctima de acoso en un bar, ni
+que nos juzguen por la forma en la
+que vamos vestidas; mucho menos
+pensar que nuestras madres, amigas,
+vecinas o incluso nosotras mismas
+seamos responsables de las acciones
+de otros individuos hacia nuestra
+integridad física y psicológica.
+                    </p>
+                    <a href="https://erialediciones.com/revista19/Crisis_19.pdf#page=115" class="read-more-btn" target="_blank" rel="noreferrer noopener">
+                      Leer más
+                    </a>
+                  </div>
+                </div>
+              </a>  
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
   <!-- end blog section -->
 
  <!-- videos section -->
@@ -435,7 +524,7 @@
       <div class="col-lg-5 ml-auto">
         <div class="heading_container">
           <h2>
-            Videos de Mari
+            Videos
           </h2>
           <p>
             Proyectos en formato de video en los que he colaborado.
@@ -509,6 +598,9 @@
             <p>
               Algunos podcasts y programas de radio que destaco.
             </p>
+            <a href="https://open.spotify.com/show/5skicPJt4SXaBm3vFSrF9C?si=5621402bf5c1437e">
+            Playlist de verano en Aragon Radio
+          </a>
           </div>
         </div>
       </div>
@@ -614,14 +706,15 @@
             </div>
           </div>
           
-          <!-- Segundo Carrusel -->
-          <div class="col-md-6">
+  <div class="col-md-6">
             <div id="articulosCarrusel2" class="carousel slide" data-ride="carousel">
               <!-- Indicadores -->
               <ol class="carousel-indicators">
                 <li data-target="#articulosCarrusel2" data-slide-to="0" class="active"></li>
                 <li data-target="#articulosCarrusel2" data-slide-to="1"></li>
                 <li data-target="#articulosCarrusel2" data-slide-to="2"></li>
+                <li data-target="#articulosCarrusel2" data-slide-to="3"></li>
+                <li data-target="#articulosCarrusel2" data-slide-to="4"></li>
               </ol>
               
               <!-- Slides -->
@@ -630,28 +723,22 @@
                 <div class="carousel-item active">
                   <div class="box b2">
                     <div class="img-box">
-                      <img src="images/articulos/libertad.jpg" alt="Protestas por la Libertad en Venezuela" />
+                      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5MqUIvIiw1xus1ArXvEWl5?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
                     <div class="blog-detail">
                       <div class="blog_title">
-                        <h5>
-                          Entre el humo
-                        </h5>
                         <div class="blog_post">
                           <h6>
-                            Publicado por: Zero Grados
+                            Publicado por: Aragón Radio
                           </h6>
                           <h6>
-                            18-02-2025
+                            05-08-2024
                           </h6>
                         </div>
                       </div>
                       <p>
-                        Crecí escuchando las historias sobre nuestros próceres, aquellos que desafiaron a los colonizadores y nos dieron la libertad. Estudié a grandes hombres y mujeres, cultos e importantes para la historia del mundo. Aprendí que nací de la sangre de Simón Bolívar, de Andrés Bello, de Luisa Cáceres de Arismendi y de Francisco de Miranda.
+                        Analizamos el conflicto que vive Venezuela tras las elecciones presidenciales llevadas a cabo el 28 de julio de 2024. Lo hacemos con Ernesto Pascual, Profesor de Ciencias Políticas de la UOC y experto en relaciones internacionales, y Mariangel Barra, estudiante de periodismo aragonesa de origen venezolano.
                       </p>
-                      <a href="https://www.zgrados.com/entre-el-humo-libertad/" class="read-more-btn" target="_blank" rel="noreferrer noopener">
-                        Leer más
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -660,28 +747,22 @@
                 <div class="carousel-item">
                   <div class="box b2">
                     <div class="img-box">
-                      <img src="images/articulos/protestas.jpg" alt="Protestas en Venezuela" />
+                      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2ZJ4l3PxrP7FeivFQJJgcz?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
                     <div class="blog-detail">
                       <div class="blog_title">
-                        <h5>
-                          La lucha continúa
-                        </h5>
                         <div class="blog_post">
                           <h6>
-                            Publicado por: Zero Grados
+                            Publicado por: Aragón Radio
                           </h6>
                           <h6>
-                            24-03-2025
+                            19-08-2024
                           </h6>
                         </div>
                       </div>
                       <p>
-                        A pesar de la represión y las amenazas, el pueblo venezolano sigue en las calles exigiendo el respeto a sus derechos fundamentales. Las protestas no son solo una expresión de descontento, sino una manifestación de esperanza y un reclamo de dignidad.
+                        Hablamos con Jenaro Massot Fradejas, vocal de la Asociación de Fotógrafos Profesionales de España (AFPE) y coautor del "Decálogo de buenas prácticas entre los profesionales de la fotografía y personas retratadas" y Manaure Quintero, fotoperiodista en lugares de conflicto.
                       </p>
-                      <a href="#" class="read-more-btn">
-                        Leer más
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -690,31 +771,74 @@
                 <div class="carousel-item">
                   <div class="box b2">
                     <div class="img-box">
-                      <img src="images/articulos/esperanza.jpg" alt="Esperanza para Venezuela" />
+                      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1op6WsHWSigv03zLhJQD5s?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
                     <div class="blog-detail">
                       <div class="blog_title">
-                        <h5>
-                          Reconstruir la esperanza
-                        </h5>
                         <div class="blog_post">
                           <h6>
-                            Publicado por: Revista América
+                            Publicado por: Aragón Radio
                           </h6>
                           <h6>
-                            05-04-2025
+                            21-08-2024
                           </h6>
                         </div>
                       </div>
                       <p>
-                        El camino hacia la recuperación de Venezuela será largo y complejo, pero existe una generación de jóvenes profesionales dispuestos a asumir el reto. Desde el exilio o dentro del país, estos venezolanos están desarrollando proyectos que apuntan hacia un futuro diferente.
+                        Analizamos qué supone esta situación para los más jóvenes y conocemos algunas de las iniciativas que existen en Aragón para ayudarlos a crear vínculos entre personas de su misma edad.
                       </p>
-                      <a href="#" class="read-more-btn">
-                        Leer más
-                      </a>
                     </div>
                   </div>
                 </div>
+
+                <!-- Artículo 4 -->
+                <div class="carousel-item">
+                  <div class="box b2">
+                    <div class="img-box">
+                      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2jaCamxkdeFjKRW1GXIjmX?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="blog-detail">
+                      <div class="blog_title">
+                        <div class="blog_post">
+                          <h6>
+                            Publicado por: Aragón Radio
+                          </h6>
+                          <h6>
+                            22-08-2024
+                          </h6>
+                        </div>
+                      </div>
+                      <p>
+                        Los últimos estudios apuntan al incremento incesante del consumo de bebidas energéticas en los jóvenes. Nos preguntamos cómo repercute en su salud presente y futura con los doctores de la Sociedad Española de Neurología (SEN) Jesús Porta-Etessam, Presidente de la SEN y Ana Fernández Arcos, Coordinadora del grupo de sueño de la SEN.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Artículo 5 -->
+                <div class="carousel-item">
+                  <div class="box b2">
+                    <div class="img-box">
+                      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5ouolFg5aQyieS4RpQ3XGW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                    <div class="blog-detail">
+                      <div class="blog_title">
+                        <div class="blog_post">
+                          <h6>
+                            Publicado por: Aragón Radio
+                          </h6>
+                          <h6>
+                            23-08-2024
+                          </h6>
+                        </div>
+                      </div>
+                      <p>
+                        Amigos de los mayores es una fundación cuyo propósito es concienciar sobre la importancia de respetar a las personas mayores y luchar contra la soledad no deseada y aislamiento social. Por ello, hoy tendremos en el estudio en nuestra sección de Aragón Solidario a Laura Soriano (técnica social de la fundación), Pilar Roche Aranda (voluntaria) y Oliva Franca Navarro (persona mayor).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               </div>
               
               <!-- Controles -->
@@ -901,80 +1025,37 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Contact Us
+            Contáctame
           </h2>
         </div>
         <div class="info_main">
           <div class="row">
             <div class="col-md-4 col-lg-3">
-              <div class="info_contact ">
-                <a href="#" class="link-box">
-                  <div class="img-box">
-                    <img src="images/location.png" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h6>
-                      Location
-                    </h6>
+              <div class="info_contact ">                  
+                <a href="#" class="contact-link" onclick="openContactModal(event)">
+                  <div class="contact-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>contacto@mariangelbarra.com</span>
                   </div>
                 </a>
-                <a href="#" class="link-box">
-                  <div class="img-box">
-                    <img src="images/mail.png" alt="" />
+                <a class="contact-link" href="Mariangel_Barra_CV.pdf" download>
+                <div class="contact-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>Descarga mi CV</span>
                   </div>
-                  <div class="detail-box">
-                    <h6>
-                      demo@gmail.com
-                    </h6>
+              </a>
+              <a class="contact-link"href="https://www.instagram.com/elmuseodemari?igsh=MXZuN3B2N20wejVzdQ==" target="_blank" rel="noreferrer noopener">
+                <div class="contact-email">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@elmuseodemari</span>
                   </div>
-                </a>
-                <a href="#" class="link-box">
-                  <div class="img-box">
-                    <img src="images/call.png" alt="" />
+              </a>
+              <a class="contact-link"href="https://www.linkedin.com/in/mariangel-barra-navas-547a39257/" target="_blank" rel="noreferrer noopener">
+                <div class="contact-email">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>Mariangel Barra Navas</span>
                   </div>
-                  <div class="detail-box">
-                    <h6>
-                      Call +01 1234567890
-                    </h6>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-2 col-lg-3">
-              <div class="info_link-box">
-                <ul>
-                  <li class=" ">
-                    <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="">
-                    <a class="" href="about.html">About </a>
-                  </li>
-                  <li class="">
-                    <a class="" href="gallery.html">Gallery </a>
-                  </li>
-                  <li class="">
-                    <a class="" href="blog.html">Blog </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6 ">
-              <div class="social_box">
-                <a href="#">
-                  <img src="images/facebook.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="images/twitter.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="images/linkedin.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="images/instagram.png" alt="" />
-                </a>
-                <a href="#">
-                  <img src="images/youtube.png" alt="" />
-                </a>
+              </a>
               </div>
             </div>
           </div>
@@ -988,17 +1069,13 @@
   <!-- footer section -->
   <footer class="footer_section ">
     <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved. Design by
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
     </div>
   </footer>
   <!-- footer section -->
 
   
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/gallery_visualizers.js"></script>
@@ -1025,6 +1102,28 @@
       </div>
     </div>
   </div>
+  <!-- Modal de Contacto (antes del cierre del </body>) -->
+<div id="contactModal" class="contact-modal">
+    <div class="contact-modal-content">
+        <button class="contact-modal-close" onclick="closeContactModal()">&times;</button>
+        <div class="contact-modal-header">
+            <h2>Contacto</h2>
+        </div>
+        <div class="contact-modal-body">
+            <form class="contact-form" action="https://formspree.io/f/mqaqvoeo" method="POST">
+                <div class="contact-form-group">
+                    <label for="contactEmail">Tu email:</label>
+                    <input type="email" id="contactEmail" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="contact-form-group">
+                    <label for="contactMessage">Mensaje:</label>
+                    <textarea id="contactMessage" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="contact-submit-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

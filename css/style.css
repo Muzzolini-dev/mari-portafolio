@@ -307,7 +307,7 @@ body {
 }
 
 #socials {
-  padding-top: 80vh;
+  padding-top: 30vh;
 }
 
 .about-text {
@@ -1331,11 +1331,13 @@ a:focus {
 .blog_section .carousel-control-prev-2 {
   background-image: url(../images/prev-arrow.png);
   left: -75px;
+  top: 350px
 }
 
 .blog_section .carousel-control-next-2 {
   background-image: url(../images/next-arrow.png);  
   right: -75px;
+  top: 350px
 }
 
 /* Estilizar los indicadores del carrusel */
@@ -1415,4 +1417,355 @@ a:focus {
 .blog_section .client_content-box {
   border-radius: 35px;
   background-color: #ffffff;
+}
+
+/* Modal de Contacto - Clases Refactorizadas */
+.contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 0, 0, 0.85);
+    z-index: 9999;
+    animation: contactFadeIn 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-modal.contact-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.contact-modal-content {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    animation: contactSlideUp 0.3s ease-out;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.contact-modal-header {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-modal-header h2 {
+    font-family: "Magilio", sans-serif;
+    color: #6e1313;
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 1px 0 #f4b3b3, -1px 0 #f4b3b3, 0 1px #f4b3b3, 0 -1px #f4b3b3;
+}
+
+.contact-modal-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, #6e1313, #f4b3b3);
+    border-radius: 2px;
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #6e1313;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10000;
+    font-family: Arial, sans-serif; /* Fuente consistente */
+    line-height: 1; /* Línea de altura consistente */
+    padding-top: 4px; /* Sin padding */
+    margin: 0; /* Sin margin */
+}
+
+.contact-modal-close:hover {
+    background-color: #6e1313;
+    color: #ffffff;
+    /* transform: rotate(90deg); */
+}
+
+.contact-modal-body {
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(90vh - 120px);
+}
+
+.contact-modal-body .contact-form {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-group label {
+    font-family: "Glacial Indifference", sans-serif;
+    color: #6e1313;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #f4b3b3;
+    border-radius: 15px;
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    border-color: #6e1313;
+    box-shadow: 0 0 10px rgba(110, 19, 19, 0.2);
+}
+
+.contact-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.contact-submit-button {
+    background: #6e1313;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: 2px solid #6e1313;
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.contact-submit-button:hover {
+    background: #f4b3b3;
+    color: #0f0000;
+    border-color: #f4b3b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 19, 19, 0.3);
+}
+
+.contact-submit-button:active {
+    transform: translateY(0);
+}
+
+/* Animaciones con nombres únicos */
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contactSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-modal {
+        padding: 15px;
+    }
+    
+    .contact-modal-content {
+        padding: 30px 20px;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    
+    .contact-modal-header h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-group input,
+    .contact-form-group textarea {
+        padding: 10px 12px;
+    }
+    
+    .contact-submit-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .contact-modal-body .contact-form {
+        padding-top: 15px;
+        gap: 15px;
+    }
+    
+    .contact-modal-header {
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-modal {
+        padding: 10px;
+    }
+    
+    .contact-modal-content {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+    
+    .contact-modal-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Estilos para el enlace que abre el modal */
+.contact-link {
+    color: #6e1313;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+     ;
+}
+
+.contact-link:hover {
+    color: #f4b3b3;
+    text-decoration: underline;
+}
+
+/* SOLUCIÓN: Agregar estas reglas CSS al final de tu archivo style.css */
+
+/* Forzar visibilidad de los enlaces de contacto */
+.info_section .info_contact .contact-link,
+.info_section .info_contact .contact-link:link,
+.info_section .info_contact .contact-link:visited,
+.info_section .info_contact .contact-link:hover,
+.info_section .info_contact .contact-link:active,
+.info_section .info_contact .contact-link:focus {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    margin: 15px 0 !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Asegurar que el contenedor contact-email sea visible */
+.contact-email {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 18px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    width: 100% !important;
+}
+
+/* Asegurar que los iconos sean visibles */
+.contact-email i {
+    font-size: 20px !important;
+    min-width: 24px !important;
+    text-align: center !important;
+    color: #ffffff !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Estilo de hover mejorado sin ocultar elementos */
+.info_section .info_contact .contact-link:hover {
+    color: #f4b3b3 !important;
+    transform: translateX(5px) !important;
+    text-decoration: none !important;
+}
+
+.info_section .info_contact .contact-link:hover .contact-email {
+    color: #f4b3b3 !important;
+}
+
+.info_section .info_contact .contact-link:hover .contact-email i {
+    color: #f4b3b3 !important;
+}
+
+/* Prevenir cualquier ocultación por pseudo-elementos */
+.info_section .info_contact .contact-link::after,
+.info_section .info_contact .contact-link::before,
+.contact-email::after,
+.contact-email::before {
+    display: none !important;
+}
+
+/* Asegurar que no hay conflictos con otros estilos */
+.info_section .info_contact {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Remover cualquier animación problemática */
+.info_section .info_contact .contact-link {
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Solo aplicar transform en hover */
+.info_section .info_contact .contact-link:hover {
+    transform: translateX(5px) !important;
+}
+
+/* Estados activos y focus sin problemas */
+.info_section .info_contact .contact-link:active,
+.info_section .info_contact .contact-link:focus {
+    outline: none !important;
+    color: #ffffff !important;
+    transform: none !important;
 }
