@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: hidden!important
 }
 
 body {
@@ -70,6 +70,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   color: #ffffff;
+  padding-top: 20vh;
 }
 
 .heading_container h2 {
@@ -303,7 +304,7 @@ body {
 #articles,
 #videos,
 #podcasts {
-  padding-top: 30vh;
+  padding-top: 5vh;
 }
 
 #socials {
@@ -644,10 +645,12 @@ a:focus {
 
 .about_section .img-box {
   width: 90%;
+  max-width: 88vw;
   margin: auto;
   position: relative;
   background-repeat: no-repeat;
   margin-top: -125px;
+  
 }
 
 .about_section .img-box .play_btn {
@@ -786,16 +789,48 @@ a:focus {
   color: #ffffff;
 }
 
+#galleries {
+      background: #0f0000 url(../images/gallery-mobile.svg);
+      background-position: center;
+      background-size: 33%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
+
+#papers {
+      background: #0f0000 url(../images/papers-mobile.svg) ;
+      background-position: left;
+      background-size: 33%;
+      background-repeat: space;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
+
+
+/* #gallery2 {
+      background: #0f0000 url(../images/gallery-mobile.svg) ;
+      background-position: left;
+      background-size: 17%;
+      background-repeat: space;
+      overflow: visible;
+} */
+
 .gallery_section .gallery_container {
   position: relative;
-  max-width: 1500px;
+  padding: 0;
+  max-width: 88vw;
   margin: auto;
+  
 }
 
 .gallery_section .gallery_container .gallery_bg {
   position: absolute;
   width: 100%;
-  top: 10%;
+  top: 0;
   margin-left: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -841,19 +876,19 @@ a:focus {
   position: relative;
   margin: 10px;
   border-radius: 35px;
-  overflow: hidden;
+ 
   width: 420px;
 }
 
 .gallery_section .gallery_container .box .img-box img {
   width: 100%;
-  min-height: 280px;
-  aspect-ratio: 16/9;
+  min-height: 266px;
+  aspect-ratio: none !important;
 }
 
 .gallery_section .gallery_container .box .project-card {
-  width:350px!important;
-  height:90%!important;
+  width:400px!important;
+  height:80%!important;
   aspect-ratio: none!important;
 }
 
@@ -862,7 +897,7 @@ a:focus {
 }
 
 .img-box img {
-  width: 100%;
+  border-radius: 15px;
   display: block;
   transition: all 0.4s ease; /* Transición para todos los efectos */
 }
@@ -944,8 +979,9 @@ a:focus {
 
 .blog_section .blog_container {
   position: relative;
-  max-width: 1500px;
+  max-width: 88vw;
   margin: auto;
+ 
 }
 
 .blog_section .blog_container .blog_bg {
@@ -971,7 +1007,7 @@ a:focus {
   margin-top: 55px;
   background-color: #ffffff;
   border-radius: 35px;
-  overflow: hidden;
+
 }
 
 .blog_section .box:hover {
@@ -979,7 +1015,7 @@ a:focus {
 }
 
 .blog_section .box.b1 {
-  margin-top: 100%;
+  margin-top: 0!important;
 }
 
 .blog_section .box .img-box {
@@ -1031,8 +1067,9 @@ a:focus {
 
 .client_section .client_container {
   position: relative;
-  max-width: 1500px;
+  max-width: 88vw;
   margin: auto;
+
 }
 
 .client_section .client_container .client_bg {
@@ -1618,6 +1655,42 @@ a:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .about_section .img-box {
+      max-width: 86vw;
+      margin: 5vw
+    }
+
+    #galleries {
+      background: #0f0000 url(../images/gallery-mobile.svg) ;
+      background-position: left;
+      background-size: 33%;
+      background-repeat: space;
+      overflow: visible;
+    }
+    #papers {
+      background: #0f0000 url(../images/papers-mobile.svg) ;
+      background-position: left;
+      background-size: 33%;
+      background-repeat: space;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      }
+
+    .gallery_section .gallery_container {
+      max-width: 86vw;
+    }
+    .gallery_section .gallery_container .gallery_bg {
+    }
+    .blog_section .blog_container {
+      max-width: 86vw;
+    }
+    .client_section .client_container {
+      max-width: 80vw;
+    }
+
+
+
+
     .contact-modal {
         padding: 15px;
     }

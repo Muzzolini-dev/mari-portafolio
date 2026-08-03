@@ -8,19 +8,10 @@ const projects = [
     thumbnail: "images/4gatos/4g-portada.jpg",
     images: [
       { src: "images/4gatos/4g-portada.jpg", title: "4 Gatos y Tú Imagen 1", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-1.jpg", title: "4 Gatos y Tú Imagen 2", description: "Descripción de la imagen" },
       { src: "images/4gatos/4g-2.jpg", title: "4 Gatos y Tú Imagen 3", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-3.jpg", title: "4 Gatos y Tú Imagen 4", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-4.jpg", title: "4 Gatos y Tú Imagen 5", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-5.jpg", title: "4 Gatos y Tú Imagen 6", description: "Descripción de la imagen" },
       { src: "images/4gatos/4g-6.jpg", title: "4 Gatos y Tú Imagen 7", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-7.jpg", title: "4 Gatos y Tú Imagen 8", description: "Descripción de la imagen" },
       { src: "images/4gatos/4g-8.jpg", title: "4 Gatos y Tú Imagen 9", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-9.jpg", title: "4 Gatos y Tú Imagen 10", description: "Descripción de la imagen" },
       { src: "images/4gatos/4g-10.jpg", title: "4 Gatos y Tú Imagen 11", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-11.jpg", title: "4 Gatos y Tú Imagen 12", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-12.jpg", title: "4 Gatos y Tú Imagen 13", description: "Descripción de la imagen" },
-      { src: "images/4gatos/4g-13.jpg", title: "4 Gatos y Tú Imagen 14", description: "Descripción de la imagen" },
       { src: "images/4gatos/4g-14.jpg", title: "4 Gatos y Tú Imagen 15", description: "Descripción de la imagen" },
     ]
   },
@@ -33,21 +24,10 @@ const projects = [
     images: [
       { src: "images/atadi/at-portada.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
       { src: "images/atadi/at-1.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-2.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-3.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-4.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
       { src: "images/atadi/at-6.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
       { src: "images/atadi/at-7.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-8.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
       { src: "images/atadi/at-9.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-10.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-11.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-12.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-13.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-14.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      { src: "images/atadi/at-15.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },
-      
-      
+      { src: "images/atadi/at-11.jpg", title: "Atadi Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 2" },     
     ]
   },
   // Añade aquí el resto de proyectos...
@@ -61,13 +41,7 @@ const projects = [
       { src: "images/amigomio/am-1.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
       { src: "images/amigomio/am-2.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
       { src: "images/amigomio/am-3.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-      { src: "images/amigomio/am-4.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-      { src: "images/amigomio/am-5.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-      { src: "images/amigomio/am-6.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-      { src: "images/amigomio/am-7.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-      { src: "images/amigomio/am-8.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
       { src: "images/amigomio/am-9.jpg", title: "Amigo Mio Teruel Imagen 1", description: "Descripción de la imagen 1 del proyecto 3" },
-
     ]
   },
   {
@@ -77,16 +51,11 @@ const projects = [
     thumbnail: "images/perros/perros-portada.jpg",
     images: [
       { src: "images/perros/perros-portada.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
-      { src: "images/perros/perros-1.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-2.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
-      { src: "images/perros/perros-3.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-4.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-5.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-6.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-7.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
-      { src: "images/perros/perros-8.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
-      { src: "images/perros/perros-9.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
-      { src: "images/perros/perros-10.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
       { src: "images/perros/perros-11.jpg", title: "Adiestramiento - Imagen 1", description: "Descripción de la imagen 1 del proyecto 4" },
 
     ]
@@ -121,18 +90,9 @@ const projects = [
     thumbnail: "images/matilda/mjm-portada.jpg",
     images: [
       { src: "images/matilda/mjm-portada.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-1.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-2.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
       { src: "images/matilda/mjm-3.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
       { src: "images/matilda/mjm-4.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-5.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-6.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
       { src: "images/matilda/mjm-7.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-8.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-9.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-10.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-11.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
-      { src: "images/matilda/mjm-12.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
       { src: "images/matilda/mjm-13.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
       { src: "images/matilda/mjm-14.jpg", title: "Proyecto 6 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 6" },
 
@@ -149,10 +109,8 @@ const projects = [
       { src: "images/concurso/con-1.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
       { src: "images/concurso/con-2.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
       { src: "images/concurso/con-3.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
-      { src: "images/concurso/con-4.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
       { src: "images/concurso/con-5.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
       { src: "images/concurso/con-6.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
-      { src: "images/concurso/con-7.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
       { src: "images/concurso/con-8.jpg", title: "Proyecto 7 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 7" },
     
     ]
@@ -164,20 +122,13 @@ const projects = [
     thumbnail: "images/paisaje/ter-portada.jpg",
     images: [
       { src: "images/paisaje/ter-portada.jpg", title: "Proyecto 8 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 8" },
-      { src: "images/paisaje/ter-1.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-2.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-3.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-4.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-5.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-6.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-7.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-8.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-9.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-10.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-11.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-12.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-13.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-
     ]
   },
   {
@@ -189,16 +140,10 @@ const projects = [
       { src: "images/7vidas/7v-portada.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-1.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-2.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-3.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-4.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-5.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-6.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-7.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-8.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-9.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-10.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
       { src: "images/7vidas/7v-11.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
-      { src: "images/7vidas/7v-12.jpg", title: "Proyecto 9 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 9" },
 
     ]
   },
@@ -209,26 +154,15 @@ const projects = [
     thumbnail: "images/caballos/cab-portada.jpg",
     images: [
       { src: "images/caballos/cab-portada.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-1.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-2.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-3.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-4.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-5.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-6.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-7.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-8.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-9.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-10.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-11.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-12.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-13.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-14.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-15.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-16.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-17.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-18.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
       { src: "images/caballos/cab-19.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
-      { src: "images/caballos/cab-20.jpg", title: "Proyecto 10 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 10" },
 
     ]
   },
@@ -239,23 +173,12 @@ const projects = [
     thumbnail: "images/venezuela/ven-portada.jpg",
     images: [
       { src: "images/venezuela/ven-portada.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-1.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-2.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-3.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-4.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-5.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-6.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-7.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-8.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-9.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-10.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-11.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-12.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-13.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-14.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
       { src: "images/venezuela/ven-15.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-      { src: "images/venezuela/ven-16.jpg", title: "Proyecto 11 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 11" },
-
     ]
   },
   {
@@ -266,21 +189,12 @@ const projects = [
     images: [
       { src: "images/proyectogato/pg-portada.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-1.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-2.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-3.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-4.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-5.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-6.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-7.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-8.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-9.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-10.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-11.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-12.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-13.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-14.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-15.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
-      { src: "images/proyectogato/pg-16.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
       { src: "images/proyectogato/pg-17.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
 
     ]
