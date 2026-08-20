@@ -418,7 +418,11 @@ a:focus {
 }
 
 .custom_nav-container {
-  z-index: 99999;
+  position: fixed;
+  background-color: #0f0000;
+  border-radius: 16px;
+  top: 0;
+  z-index: 9999;
   padding: 15px 0;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -537,6 +541,48 @@ a:focus {
   background: linear-gradient(to bottom, #000000, transparent, transparent);
   z-index: 1;
   display: none;
+}
+
+/* Hide prev/next arrows and indicators when the thesis carousel has only one slide */
+.carousel-inner:has(.carousel-item:only-child) ~ .carousel-control-prev,
+.carousel-inner:has(.carousel-item:only-child) ~ .carousel-control-next,
+.carousel-inner:has(.carousel-item:only-child) ~ .carousel-indicators {
+  display: none;
+}
+
+/* Papers section: same grid/gap treatment as podcasts */
+#papers .blog_box {
+  width: calc(80% + 15vw);
+}
+#papers .blog_box .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15vw;
+  margin: 0;
+}
+#papers .blog_box .row > [class*="col-"] {
+  width: auto;
+  max-width: none;
+  flex: none;
+  padding: 0;
+}
+
+/* Arrow positions for the two papers carousels — placeholders */
+.carousel-control-prev-theses,
+.carousel-control-next-theses,
+.carousel-control-prev-articles,
+.carousel-control-next-articles {
+  top: 50%; /* measure real card height once content is swapped in, then set a fixed px/% like the podcast ones */
+}
+.carousel-control-prev-theses,
+.carousel-control-prev-articles {
+  background-image: url(../images/prev-arrow.png);
+  left: -75px;
+}
+.carousel-control-next-theses,
+.carousel-control-next-articles {
+  background-image: url(../images/next-arrow.png);
+  right: -75px;
 }
 
 .slider_section .carousel_control-box {
@@ -792,7 +838,7 @@ a:focus {
 #galleries {
       background: #0f0000 url(../images/gallery-mobile.svg);
       background-position: center;
-      background-size: 33%;
+      background-size: 25%;
       background-repeat:repeat-y;
       background-attachment: fixed;
       padding-top: 3%;
@@ -802,12 +848,23 @@ a:focus {
 
 #papers {
       background: #0f0000 url(../images/papers-mobile.svg) ;
-      background-position: left;
-      background-size: 33%;
-      background-repeat: space;
+      background-position: center;
+      background-size: 28%;
+      background-repeat: repeat-y;
+      background-attachment: fixed;
       padding-top: 3%;
       padding-bottom: 3%;
       
+}
+
+#podcasts {
+   background: #0f0000 url(../images/podcast-mobile.svg);
+      background-position: center;
+      background-size: 25%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
 }
 
 
@@ -1003,6 +1060,25 @@ a:focus {
   margin: auto;
 }
 
+/* Podcast section: separate the two carousels without shrinking them */
+#podcasts .blog_box {
+  width: calc(80% + 15vw); /* widen by exactly the gap we're adding */
+}
+
+#podcasts .blog_box .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15vw;
+  margin: 0; /* cancel Bootstrap's -15px row margins */
+}
+
+#podcasts .blog_box .row > [class*="col-"] {
+  width: auto;
+  max-width: none;
+  flex: none;
+  padding: 0; /* cancel Bootstrap's 15px column padding */
+}
+
 .blog_section .box {
   margin-top: 55px;
   background-color: #ffffff;
@@ -1010,13 +1086,31 @@ a:focus {
 
 }
 
+.blog_section .box.b1 {
+  margin-top: 0!important;
+}
+
+.blog_section .box.b2 {
+  margin-top: 25px!important;
+}
+
+.blog_section .box.b3 {
+  margin-top: 50px!important;
+}
+
+.blog_section .box.b4 {
+  margin-top: 75px!important;
+}
+
+.blog_section .box.b5 {
+  margin-top: 100px!important;
+}
+
 .blog_section .box:hover {
   background-color: #002028f0;
 }
 
-.blog_section .box.b1 {
-  margin-top: 0!important;
-}
+
 
 .blog_section .box .img-box {
   position: relative;
@@ -1147,7 +1241,7 @@ a:focus {
 .client_section .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: #000000;
+  background-color: #440000;
   opacity: 1;
   top: 50%;
   background-repeat: no-repeat;
@@ -1336,7 +1430,7 @@ a:focus {
 .blog_section .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: #000000;
+  background-color: #440000;
   opacity: 1;
   top: 50%;
   background-repeat: no-repeat;
@@ -1400,13 +1494,14 @@ a:focus {
   opacity: 1;
 }
 
-
-/* Ajustes para dispositivos pequeños */
-@media (max-width: 767px) {
+@media (max-width: 992px){
   .blog_section .carousel-control-prev,
   .blog_section .carousel-control-next {
     display: none;
   }
+}
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 767px) {
   
   .blog_section .carousel-indicators {
     bottom: -20px;
@@ -1661,20 +1756,33 @@ a:focus {
     }
 
     #galleries {
-      background: #0f0000 url(../images/gallery-mobile.svg) ;
-      background-position: left;
-      background-size: 33%;
-      background-repeat: space;
-      overflow: visible;
+      background: #0f0000 url(../images/gallery-mobile.svg);
+      background-position: center;
+      background-size: 45%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
     }
     #papers {
       background: #0f0000 url(../images/papers-mobile.svg) ;
-      background-position: left;
-      background-size: 33%;
-      background-repeat: space;
+      background-position: center;
+      background-size: 48%;
+      background-repeat: repeat-y;
+      background-attachment: fixed;
       padding-top: 3%;
       padding-bottom: 3%;
       }
+
+      #podcasts {
+      background: #0f0000 url(../images/podcast-mobile.svg);
+      background-position: center;
+      background-size: 35%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+    }
 
     .gallery_section .gallery_container {
       max-width: 86vw;

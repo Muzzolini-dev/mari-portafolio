@@ -144,10 +144,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar el segundo carrusel con un intervalo diferente para evitar sincronización
     $('#articulosCarrusel2').carousel({
-      interval: 7000,  // 7 segundos
+      interval: 5000,  
       pause: 'hover',
       wrap: true
     });
+
+   /*  // ↓↓↓ ADD THESE TWO BLOCKS HERE ↓↓↓
+    $('#Papers-Theses-Carousel').carousel({
+      interval: 6000,
+      pause: 'hover',
+      wrap: true
+    }); */
+
+    $('#Papers-Articles-Carousel').carousel({
+      interval: 5000,
+      pause: 'hover',
+      wrap: true
+    });
+    // ↑↑↑ ADD THESE TWO BLOCKS HERE ↑↑↑
+    
     
     // Detener la autorotación al pasar el mouse sobre el carrusel
     $('.blog_section .carousel').on('mouseenter', function() {

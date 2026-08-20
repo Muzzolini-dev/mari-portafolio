@@ -97,6 +97,25 @@
     .social_box {
         filter: invert(100%);
     }
+    
+        /* Collapse podcast grid to single column below 992px */
+    #podcasts .blog_box .row {
+        display: block; /* or grid-template-columns: 1fr; if you prefer to stay grid */
+    }
+
+    #podcasts .blog_box .row > [class*="col-"] {
+       max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #papers .blog_box .row {
+    display: block;
+    }
+
+    #papers .blog_box .row > [class*="col-"] {
+    max-width: 600px;
+    margin: 0 auto;
+    }
 
 }
 
