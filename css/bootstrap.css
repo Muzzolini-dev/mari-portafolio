@@ -6239,7 +6239,6 @@ a.close.disabled {
   display: none;
   float: left;
   width: 100%;
-  min-height: 800px;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

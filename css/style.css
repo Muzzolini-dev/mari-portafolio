@@ -523,11 +523,12 @@ a:focus {
 }
 
 .slider_section .img-box {
-  margin-top: -125px;
+  margin-top: -55px;
 }
 
 .slider_section .img-box img {
   width: 100%;
+  height: 100%!important
 }
 
 .slider_section .img-box::before {
@@ -1462,18 +1463,22 @@ a:focus {
 .blog_section .carousel-control-prev-2 {
   background-image: url(../images/prev-arrow.png);
   left: -75px;
-  top: 350px
+  top: 69.3%
 }
 
 .blog_section .carousel-control-next-2 {
   background-image: url(../images/next-arrow.png);  
   right: -75px;
-  top: 350px
+  top: 69.3%
 }
 
 /* Estilizar los indicadores del carrusel */
 .blog_section .carousel-indicators {
-  bottom: -40px;
+  bottom: -100px;
+}
+
+.blog_section .box {
+  min-height: 600px!important;
 }
 
 .blog_section .carousel-control-prev:hover,

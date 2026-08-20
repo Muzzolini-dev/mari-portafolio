@@ -35,7 +35,7 @@
     }
 
     .slider_section .img-box {
-        margin-top: -135px;
+        margin-top: -55px;
     }
 
     .slider_section .detail-box {
@@ -97,7 +97,7 @@
     .social_box {
         filter: invert(100%);
     }
-    
+
         /* Collapse podcast grid to single column below 992px */
     #podcasts .blog_box .row {
         display: block; /* or grid-template-columns: 1fr; if you prefer to stay grid */
