@@ -4,8 +4,29 @@ function openNav() {
     document
         .querySelector(".custom_menu-btn")
         .classList.toggle("menu_btn-style");
+        document.querySelector(".user_option").classList.remove("mobile_open");
 
 }
+
+function toggleMobileLinks(event) {
+    if (event) event.stopPropagation();
+    document.getElementById("myNav").classList.remove("menu_width");
+    document.querySelector(".custom_menu-btn").classList.remove("menu_btn-style");
+    document.querySelector(".user_option").classList.toggle("mobile_open");
+}
+
+document.addEventListener("click", function (e) {
+    var panel = document.querySelector(".user_option");
+    var btn = document.querySelector(".mobile_links_btn");
+    if (
+        panel.classList.contains("mobile_open") &&
+        !panel.contains(e.target) &&
+        e.target !== btn &&
+        !btn.contains(e.target)
+    ) {
+        panel.classList.remove("mobile_open");
+    }
+});
 
 // display current year on footer
 function getCurrentYear() {

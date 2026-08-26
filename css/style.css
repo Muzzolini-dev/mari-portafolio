@@ -12,17 +12,18 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden!important
+  scrollbar-color: #6e1313 #fad1d1;
 }
 
 body {
   font-family: "Glacial Indifference", sans-serif;
   color: #ffffff;
   background-color: #0f0000;
+  overflow-x: hidden!important;
 }
 
 .home-button {
-  height: 50px;
+  height: 40px;
   width: auto;
   margin-right: 3px;
 }
@@ -144,7 +145,7 @@ body {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%)!important;
   border: 5px solid transparent;
   border-top-color: #6e1313;
   margin-bottom: -5px;
@@ -391,7 +392,7 @@ a:focus {
 }
 
 .fk_width {
-  width: 105px;
+  width: 75px;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -418,7 +419,7 @@ a:focus {
 }
 
 .custom_nav-container {
-  position: fixed;
+  position: fixed!important;
   background-color: #0f0000;
   border-radius: 16px;
   top: 0;
@@ -427,6 +428,7 @@ a:focus {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  opacity:0.9
 }
 
 
@@ -452,7 +454,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 45px;
+  margin-left: 25px;
 }
 
 .user_option a {
@@ -467,13 +469,24 @@ a:focus {
   text-transform: uppercase;
 }
 
-.user_option a img {
+/* .user_option a img {
   width: 20px;
   margin-right: 10px;
-}
+} */
 
 .user_option a span {
   color: #ffffff;
+}
+
+.mobile_links_btn {
+  display: none;
+  outline: none!important;
+  border: none!important;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
 }
 
 /*end header section*/
@@ -524,6 +537,7 @@ a:focus {
 
 .slider_section .img-box {
   margin-top: -55px;
+  margin-right: 0;
 }
 
 .slider_section .img-box img {
@@ -868,6 +882,17 @@ a:focus {
       padding-bottom: 3%;
 }
 
+#videos {
+      background: #0f0000 url(../images/video-mobile.svg);
+      background-position: center;
+      background-size: 25%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
+
 
 /* #gallery2 {
       background: #0f0000 url(../images/gallery-mobile.svg) ;
@@ -940,8 +965,6 @@ a:focus {
 
 .gallery_section .gallery_container .box .img-box img {
   width: 100%;
-  min-height: 266px;
-  aspect-ratio: none !important;
 }
 
 .gallery_section .gallery_container .box .project-card {
@@ -955,6 +978,8 @@ a:focus {
 }
 
 .img-box img {
+  width: 100%!important;
+  height: auto!important;
   border-radius: 15px;
   display: block;
   transition: all 0.4s ease; /* Transición para todos los efectos */
@@ -1520,8 +1545,7 @@ a:focus {
 /* Asegurar que las imágenes tengan la misma altura */
 .blog_section .box .img-box img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
 }
 
 /* Altura fija para el contenido de texto para alinear los botones */
@@ -1782,12 +1806,23 @@ a:focus {
       #podcasts {
       background: #0f0000 url(../images/podcast-mobile.svg);
       background-position: center;
-      background-size: 35%;
+      background-size: 40%;
       background-repeat:repeat-y;
       background-attachment: fixed;
       padding-top: 3%;
       padding-bottom: 3%;
     }
+
+    #videos {
+      background: #0f0000 url(../images/video-mobile.svg);
+      background-position: center;
+      background-size: 45%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
 
     .gallery_section .gallery_container {
       max-width: 86vw;

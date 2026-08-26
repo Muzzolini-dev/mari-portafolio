@@ -58,21 +58,24 @@
                 </button>
               </div>
               <div id="myNav" class="overlay">
-                <div class="overlay-content">
+                <div class="overlay-content"style="overflow:hidden;">
                   <a class="" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                   <a class="" href="#about">Sobre mí </a>
-                  <a class="" href="#gallery">Galeria </a>
-                  <a class="" href="#articles">Publicaciones </a>
+                  <a class="" href="#galleries">Galeria </a>
+                  <a class="" href="#papers">Publicaciones </a>
                   <a class="" href="#videos">Videos</a>
                   <a class="" href="#podcasts">Podcasts </a>
                   <a class="" href="#socials">Community Management </a> 
-                  <a class="" href="#info_section">Contáctame </a>                  
+                  <a class="" href="#contact">Contáctame </a>                  
                 </div>
               </div>
             </div>
             <a class="navbar-brand" href="index.html" data-title="Inicio">
               <img src="images/mari-logo1500.png" class="home-button">
             </a>
+            <button class="mobile_links_btn" onclick="toggleMobileLinks(event)" data-title="Más opciones">
+              <i class="fa-solid fa-link"></i>
+            </button>
             <div class="user_option">
               <a href="#" onclick="openContactModal(event)" data-title="Contactar">
                     <i class="fa fa-envelope" style="font-size: 25px"></i>
@@ -86,7 +89,7 @@
               <a href="https://www.linkedin.com/in/mariangel-barra-navas-547a39257/" data-title="Mi LinkedIn" target="_blank" rel="noreferrer noopener">
                 <i class="fa-brands fa-linkedin" style="font-size:30px"></i>
               </a>
-              <a href="https://www.linkedin.com/in/mariangel-barra-navas-547a39257/" data-title="Peluchones" target="_blank" rel="noreferrer noopener">
+              <a href="https://www.proyectopeluchones.es" data-title="Web de Peluchones" target="_blank" rel="noreferrer noopener">
                 <img src="/images/peluchones.png" style="width: 35px; height: 35px">
               </a>
             </div>
@@ -601,7 +604,6 @@
   <!-- end blog section -->
 
  <!-- videos section -->
- <section id="videos" class="gallery_section layout_padding-top">
   <div class="container">
     <div class="row">
       <div class="col-lg-5 ml-auto">
@@ -619,6 +621,8 @@
       </div>
     </div>
   </div>
+ <section id="videos" class="gallery_section layout_padding-top">
+  
   <div class="gallery_container">
     <!-- <div class="gallery_bg">
       <img src="images/gallery-bg.png" alt="" />
@@ -1101,7 +1105,7 @@
 
   <!-- info section -->
 
-  <section class="info_section ">
+  <section id="contact" class="info_section ">
     <div class="info_container layout_padding-top">
       <div class="container">
         <div class="heading_container">
@@ -1121,7 +1125,7 @@
                 </a>
                 <a class="contact-link" href="Mariangel_Barra_CV.pdf" download>
                 <div class="contact-email">
-                    <i class="fa fa-envelope"></i>
+                    <i class="fa fa-download"></i>
                     <span>Descarga mi CV</span>
                   </div>
               </a>
