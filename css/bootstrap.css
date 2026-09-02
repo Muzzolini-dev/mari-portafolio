@@ -248,12 +248,12 @@ textarea {
 
 button,
 input {
-  overflow: visible;
+  overflow: hidden;
 }
 
 button,
 select {
-  text-transform: none;
+  text-transform: none!important;
 }
 
 select {

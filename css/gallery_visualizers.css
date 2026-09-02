@@ -131,7 +131,7 @@
 .modal-close {
   background-color: #6e1313;
   color: white;
-  border: none;
+  border: none!important;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -147,6 +147,7 @@
 .modal-close:hover {
   background-color: #440000;
   transform: scale(1.1);
+  border: none!important;
 }
 
 .modal-nav {
@@ -166,6 +167,9 @@
   transition: all 0.3s ease;
   z-index: 1010;
   padding-bottom: 8px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .modal-nav:hover {
@@ -174,10 +178,16 @@
 
 .modal-prev {
   left: 140px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .modal-next {
   right: 145px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .image-info {

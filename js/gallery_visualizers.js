@@ -128,7 +128,9 @@ const projects = [
       { src: "images/paisaje/ter-5.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-7.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
       { src: "images/paisaje/ter-8.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
-      { src: "images/paisaje/ter-10.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
+      { src: "images/paisaje/st-1.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
+      { src: "images/paisaje/st-2.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
+      { src: "images/paisaje/st-3.jpg", title: "Proyecto 8 - Imagen 2", description: "Descripción de la imagen 2 del proyecto 8" },
     ]
   },
   {
@@ -198,7 +200,61 @@ const projects = [
       { src: "images/proyectogato/pg-17.jpg", title: "Proyecto 12 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
 
     ]
-  }
+  },
+  {
+    id: 13,
+    title: "Escuchando el mar",
+    description: "Un atardecer en el mar de Gandia",
+    thumbnail: "images/gandia/gandia_portada.jpg",
+    images: [
+      { src: "images/gandia/gandia_portada.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/gandia/gandia1.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/gandia/gandia2.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/gandia/gandia3.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+
+    ]
+  },
+  {
+    id: 14,
+    title: "California Dreamin'",
+    description: "Un atardecer en el mar de Gandia",
+    thumbnail: "images/LA/la_portada.jpg",
+    images: [
+      { src: "images/LA/la1.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/la2.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/la3.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/la4.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/la5.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/la6.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf1.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf2.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf3.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf4.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf5.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/LA/sf6.jpg", title: "Proyecto 14 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+
+    ]
+  },
+  {
+    id: 15,
+    title: "Templo Dag Shang Kagyu",
+    description: "Un atardecer en el mar de Gandia",
+    thumbnail: "images/templo/templo_portada.jpg",
+    images: [
+      { src: "images/templo/templo_portada.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo2.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo3.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo4.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo5.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo6.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo7.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo8.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+      { src: "images/templo/templo9.jpg", title: "Proyecto 13 - Imagen 1", description: "Descripción de la imagen 1 del proyecto 12" },
+     
+
+    ]
+  },
+
 ];
 
 // Asegúrate de que el DOM está cargado
