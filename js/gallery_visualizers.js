@@ -235,29 +235,26 @@ function init() {
   let currentProject = null;
   let currentImageIndex = 0;
   
-  // Buscar todas las cajas de imágenes que deben ser clicables
-  const imgBoxes = document.querySelectorAll('.img-box.project-card');
-  console.log(`Encontradas ${imgBoxes.length} cajas de imágenes con clase .img-box.project-card`);
-  
-  // Si no hay ninguna, intentar con todas las .img-box
-  if (imgBoxes.length === 0) {
-    const allImgBoxes = document.querySelectorAll('.gallery_section .img-box');
-    console.log(`Intentando con todas las .img-box: ${allImgBoxes.length} encontradas`);
-    
-    allImgBoxes.forEach(imgBox => {
-      // Solo añadir evento si no es para videos (tiene clase fx)
-      if (!imgBox.classList.contains('fx')) {
-        addClickEvent(imgBox);
+  // Delegación de eventos: funciona incluso con los slides clonados que
+  // Swiper genera para el loop infinito (loop: true)
+  document.querySelectorAll('.gallery-swiper').forEach(function(swiperEl) {
+    swiperEl.addEventListener('click', function(e) {
+      const card = e.target.closest('.img-box.project-card');
+      if (!card) return;
+
+      e.preventDefault();
+      const projectId = parseInt(card.dataset.projectId);
+      console.log(`Clic en proyecto ID: ${projectId}`);
+
+      if (projectId) {
+        openProject(projectId);
+      } else {
+        console.warn("Este elemento no tiene un ID de proyecto asignado");
       }
     });
-  } else {
-    // Añadir eventos de clic a las cajas encontradas
-    imgBoxes.forEach(imgBox => {
-      addClickEvent(imgBox);
-    });
-  }
+  });
   
-  // Función para añadir evento de clic a un elemento
+  /* // Función para añadir evento de clic a un elemento
   function addClickEvent(element) {
     // Asegurarnos de que tiene el estilo de puntero
     element.style.cursor = 'pointer';
@@ -276,8 +273,8 @@ function init() {
     });
     
     console.log(`Evento de clic añadido a elemento con ID de proyecto: ${element.dataset.projectId}`);
-  }
-  
+  }*/
+   
   // Función para abrir un proyecto
   function openProject(projectId) {
     // Buscar el proyecto

@@ -156,6 +156,7 @@ function initCarouselIndicatorPure() {
 setTimeout(initCarouselIndicatorPure, 1000);
 // JavaScript para los carruseles de artículos
 document.addEventListener('DOMContentLoaded', function() {
+    
     // Inicializar el primer carrusel con intervalos más largos
     $('#articulosCarrusel1').carousel({
       interval: 6000,  // 6 segundos
@@ -182,6 +183,38 @@ document.addEventListener('DOMContentLoaded', function() {
       pause: 'hover',
       wrap: true
     });
+
+    document.querySelectorAll('.gallery-swiper').forEach(function(el) {
+    new Swiper(el, {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 35,
+    keyboard:{
+        enabled: true,
+        onlyInViewport: true
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 20,
+      depth: 350,
+      modifier: 1.5,
+      slideShadows: false
+    },
+    navigation: {
+      nextEl: el.querySelector('.gallery-nav-next'),
+      prevEl: el.querySelector('.gallery-nav-prev')
+    },
+    breakpoints: {
+      0:   { slidesPerView: 1.2 },
+      768: { slidesPerView: 'auto' }
+    }
+    
+  });
+  
+});
     // ↑↑↑ ADD THESE TWO BLOCKS HERE ↑↑↑
     
     
