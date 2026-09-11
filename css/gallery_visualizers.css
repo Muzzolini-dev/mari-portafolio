@@ -72,12 +72,13 @@
 
 /* FIX: Contenedor de miniaturas laterales mejorado */
 .modal-thumbnails {
-  width: 120px;
-  height: calc(100% - 70px);
+  width: 150px!important;
+  height: 95%;
   overflow-y: auto; /* Esto permite el scroll si hay muchas imágenes */
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 10px;
-  padding: 10px;
+  padding: 15px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -130,7 +131,7 @@
 
 .modal-close {
   background-color: #6e1313;
-  color: white;
+  color: #f4b3b3;
   border: none!important;
   border-radius: 50%;
   width: 40px;
@@ -154,10 +155,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #6e1313;
-  color: white;
+  color: #f4b3b3;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -177,14 +178,14 @@
 }
 
 .modal-prev {
-  left: 140px;
+  left: 5%;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
 
 .modal-next {
-  right: 145px;
+  right: 5%;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -233,7 +234,21 @@
   background: #f4b3b3;
 }
 
-/* Ajustes responsive */
+@media (max-width: 992px) {
+   .modal-prev {
+    left: 40%;
+  }
+
+  .modal-next {
+    right:40%;
+  }
+
+  .modal-nav {
+    top: 75%;
+  }
+
+}
+
 @media (max-width: 768px) {
   .modal-thumbnails {
     width: 90px;
@@ -244,10 +259,8 @@
     height: 60px;
   }
   
-  .modal-prev {
-    left: 110px;
-  }
-  
+ 
+
   .modal-header {
     padding: 10px;
   }
@@ -268,21 +281,6 @@
 }
 
 /* Fix específico para mostrar todas las miniaturas del modal */
-
-/* Contenedor de miniaturas - asegurarse que sea visible y con altura correcta */
-.modal-thumbnails {
-  width: 120px;
-  height: calc(100% - 70px) !important; /* Altura calculada respecto al contenedor padre */
-  overflow-y: auto !important; /* Permitir scroll vertical */
-  overflow-x: hidden;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex !important;
-  flex-direction: column;
-  gap: 10px;
-  position: relative !important;
-  z-index: 100;
-}
 
 /* Todas las miniaturas deben ser visibles */
 .modal-thumbnail {
@@ -330,11 +328,6 @@
 /* Asegurarse de que modal-main no oculte las miniaturas */
 .modal-main {
   margin-left: 20px;
-}
-
-/* Ajuste para los botones de navegación */
-.modal-prev {
-  left: 150px; /* Alejamos un poco más para evitar superposición */
 }
 
 /* Fix para asegurar que el contenedor modal-content muestre correctamente sus hijos */

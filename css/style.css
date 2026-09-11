@@ -608,7 +608,8 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 45px;
+  margin-top: 10px;
+  padding-top: 45px;
 }
 
 .slider_section .carousel_btn-container {
@@ -1192,6 +1193,7 @@ a:focus {
 @media (max-width: 768px) {
   .gallery-swiper .swiper-slide {
     width: 280px;
+    height: auto;
   }
 }
 
@@ -1504,15 +1506,19 @@ a:focus {
 /* footer section*/
 .footer_section {
   color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .footer_section p {
-  margin: 0;
+  margin: auto;
   padding: 20px 0;
 }
 
 .footer_section a {
   color: #ffffff;
+  text-align: center;
 }
 
 .modal-dialog {
