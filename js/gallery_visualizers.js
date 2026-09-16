@@ -170,7 +170,7 @@ const projects = [
   },
   {
     id: 11,
-    title: "Venezuela Unida por la Libertad a lo largo del Mundo",
+    title: "Venezuela Unida por la Libertad a lo largo del mundo",
     description: "Crónica de las protestas por la libertad de Venezuela en 2024",
     thumbnail: "images/venezuela/ven-portada.jpg",
     images: [
@@ -454,5 +454,26 @@ function init() {
     }
   });
   
+    // Navegación por swipe (móvil)
+  let touchStartX = 0;
+
+  modalImage.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  modalImage.addEventListener('touchend', function(e) {
+    const touchEndX = e.changedTouches[0].screenX;
+    const deltaX = touchEndX - touchStartX;
+    const swipeThreshold = 40; // px mínimos para contar como swipe
+
+    if (Math.abs(deltaX) < swipeThreshold) return;
+
+    if (deltaX < 0) {
+      modalNext.click(); // swipe izquierda → siguiente
+    } else {
+      modalPrev.click(); // swipe derecha → anterior
+    }
+  }, { passive: true });
+
   console.log("Visualizador inicializado correctamente");
 }

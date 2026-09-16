@@ -8,6 +8,17 @@ function openNav() {
 
 }
 
+document.querySelectorAll('#myNav .overlay-content a').forEach(function (link) {
+    link.addEventListener('click', function () {
+        var nav = document.getElementById('myNav');
+        nav.style.transition = 'none';          // suspend the 0.5s width transition
+        nav.classList.remove('menu_width');
+        nav.offsetHeight;                        // force reflow so the change applies with no transition
+        nav.style.transition = '';                // restore it for the next normal open/close
+        document.querySelector('.custom_menu-btn').classList.remove('menu_btn-style');
+    });
+});
+
 function toggleMobileLinks(event) {
     if (event) event.stopPropagation();
     document.getElementById("myNav").classList.remove("menu_width");

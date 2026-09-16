@@ -36,7 +36,7 @@
   height: 100%;
   background-color:#0f0000e1!important;
   z-index: 1000;
-  overflow: hidden;
+  overflow: hidden!important;
 }
 
 .modal-header {
@@ -72,8 +72,9 @@
 
 /* FIX: Contenedor de miniaturas laterales mejorado */
 .modal-thumbnails {
+  scrollbar-width: thin!important;
   width: 150px!important;
-  height: 95%;
+  height: 100%;
   overflow-y: auto; /* Esto permite el scroll si hay muchas imágenes */
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 10px;
@@ -90,7 +91,7 @@
 /* FIX: Mejorar visualización de las miniaturas */
 .modal-thumbnail {
   width: 100px;
-  height: 75px;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
   border-radius: 5px;
@@ -125,6 +126,8 @@
 .modal-image {
   max-width: 90%;
   max-height: 80vh;
+  border-color: #f4b3b3;
+  box-shadow: 0 0 10px rgba(244, 179, 179, 0.5);
   border-radius: 8px;
   background-color: transparent;
 }
@@ -215,10 +218,6 @@
   margin: 0;
 }
 
-/* Estilo de la barra de desplazamiento */
-.modal-thumbnails::-webkit-scrollbar {
-  width: 8px;
-}
 
 .modal-thumbnails::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.3);
@@ -226,7 +225,7 @@
 }
 
 .modal-thumbnails::-webkit-scrollbar-thumb {
-  background: #6e1313;
+  background: transparent;
   border-radius: 4px;
 }
 
@@ -235,16 +234,35 @@
 }
 
 @media (max-width: 992px) {
-   .modal-prev {
-    left: 40%;
+  .modal-content{
+    display: block!important;
+    margin-top: 5%;
   }
 
-  .modal-next {
-    right:40%;
+  .modal-title {
+    font-size: 48px;
+  }
+
+  .modal-main {
+    overflow: hidden!important;
+    margin-left: 0%!important;
+    margin-top: 15%;
+  }
+  .modal-thumbnails {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%!important;
+    height:fit-content;
+    margin: auto;
+  }
+  .modal-thumbnail{
+    width: auto!important;
+    height: 125px!important;
   }
 
   .modal-nav {
-    top: 75%;
+    display: none!important;
+    visibility: hidden!important;
   }
 
 }
@@ -255,18 +273,45 @@
   }
   
   .modal-thumbnail {
-    width: 70px;
-    height: 60px;
+    height: 100px!important;
   }
   
- 
-
   .modal-header {
     padding: 10px;
   }
   
   .modal-title {
-    font-size: 18px;
+    font-size: 40px;
+  }
+
+  .modal {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none; /* old Edge/IE */
+  }
+
+  /* hide the scrollbar visually, keep it functional */
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-image {
+    max-height: 50vh;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .modal-content {
+    margin-top:12%;
+  }
+  .modal-main {
+    margin-top: 20%;
+  }
+
+  .modal-title {
+    font-size: clamp(1.2rem, 4.5vw, 2.5rem);
+
   }
 }
 
@@ -310,11 +355,6 @@
   border-color: #6e1313;
 }
 
-/* Estilo para la barra de desplazamiento */
-.modal-thumbnails::-webkit-scrollbar {
-  width: 8px;
-}
-
 .modal-thumbnails::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -332,8 +372,8 @@
 
 /* Fix para asegurar que el contenedor modal-content muestre correctamente sus hijos */
 .modal-content {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: stretch !important;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 

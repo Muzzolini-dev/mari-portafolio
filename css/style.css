@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: #6e1313 #fad1d1;
+  scrollbar-color:#fad1d1 transparent;
 }
 
 body {
@@ -1609,10 +1609,10 @@ a:focus {
 }
 
 .blog_section .carousel-indicators li {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #6e1313;
+  background-color: #f4b3b3;
   opacity: 0.5;
 }
 
@@ -1850,6 +1850,12 @@ a:focus {
 
 .contact-submit-button:active {
     transform: translateY(0);
+}
+
+.contact-success-message .success-icon,
+.contact-success-message h3,
+.contact-success-message p {
+  color: #6e1313;
 }
 
 /* Animaciones con nombres únicos */
