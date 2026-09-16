@@ -1034,10 +1034,7 @@ a:focus {
   opacity: 1; /* Hace visible el ícono de play */
 }
 
-/* Sutil efecto de escala en la imagen */
-.fx:hover img {
-  transform: scale(1.05);
-}
+
 
 
 .gallery_section .gallery_container .box .img-box h5 {
@@ -1118,6 +1115,10 @@ a:focus {
 .gallery-swiper .swiper-wrapper {
   align-items: center; /* vertically centers cards of differing heights */
   transform-style: preserve-3d;
+}
+
+.gallery-swiper.video-swiper .swiper-slide {
+  width: 520px;
 }
 
 .gallery-swiper .swiper-slide {
