@@ -1196,6 +1196,9 @@ a:focus {
     width: 280px;
     height: auto;
   }
+  .gallery-swiper.video-swiper .swiper-slide {
+    width: 380px;
+}
 }
 
 .blog_section .box {
