@@ -1494,6 +1494,17 @@ a:focus {
   margin: 0 10px;
 }
 
+.reel-hint {
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;              /* text color */
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    transition: opacity .3s;
+}
+
 .info_section a {
   text-transform: none;
 }

@@ -441,18 +441,21 @@ document.addEventListener('DOMContentLoaded', function () {
         iframe.src = src;
     }
 
-    // Instagram's iframe swallows pointer events entirely once a gesture starts
-    // on it (cross-origin isolation) — so each card gets a transparent overlay
-    // that catches the gesture first, and only steps aside for taps so the
-    // click still lands on the real iframe underneath (lets play/pause work)
-    socialsCarousel.querySelectorAll('.client_content-box').forEach(function (card) {
+        socialsCarousel.querySelectorAll('.client_content-box').forEach(function (card) {
         card.style.position = 'relative';
 
         var overlay = document.createElement('div');
         overlay.style.cssText =
-            'position:absolute; top:0; left:0; width:100%; height:100%;' +
-            'z-index:5; touch-action:pan-y; cursor:grab;';
+            'position:absolute; top:100px; left:0; width:100%; height:100%;' +
+            'z-index:5; touch-action:pan-y; cursor:grab;' +
+            'display:flex; align-items:center; justify-content:center; padding-bottom:18%;';
         card.appendChild(overlay);
+
+      
+        var hint = document.createElement('div');
+        hint.className = 'reel-hint';
+        hint.textContent = 'Toca dos veces para reproducir';
+        overlay.appendChild(hint);
 
         var startX = 0;
         var pointerId = null;
@@ -478,6 +481,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // a tap, not a swipe — this is the user reaching for play,
             // so pause autoplay right here instead of guessing at it later
             stopAutoplay();
+            hint.style.opacity = '0';
 
             // step aside so the browser's own click lands on Instagram's iframe,
             // then come back for next time
@@ -493,5 +497,8 @@ document.addEventListener('DOMContentLoaded', function () {
     $(socialsCarousel).on('slide.bs.carousel', function () {
         var outgoingIframe = socialsCarousel.querySelector('.carousel-item.active iframe.instagram-media');
         stopIframePlayback(outgoingIframe);
+        socialsCarousel.querySelectorAll('.reel-hint').forEach(function (h) {
+            h.style.opacity = '1';
+        });
     });
 });
