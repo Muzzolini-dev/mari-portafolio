@@ -192,6 +192,20 @@
     .info_section .heading_container {
         align-items: center;
     }
+
+    .client_section .client_box {
+        width: 100%;
+    }
+
+    .client_section .col-lg-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .client_section .client_content-box {
+        margin: 0;
+        overflow-x: hidden; 
+    }
 }
 
 @media (max-width: 576px) {

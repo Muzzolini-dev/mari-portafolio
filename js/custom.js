@@ -415,4 +415,83 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.addEventListener('submit', handleContactFormSubmit);
         }
     }
+});   
+
+document.addEventListener('DOMContentLoaded', function () {
+    var socialsCarousel = document.querySelector('#carouselExampleControls');
+    if (!socialsCarousel) return;
+     $(socialsCarousel).off('mouseenter.bs.carousel mouseleave.bs.carousel');
+    var SWIPE_THRESHOLD = 50; // px needed to actually flip the slide
+
+   var RESUME_DELAY = 210000; // ms — how long to wait after the last interaction before auto-resuming; adjust to taste
+    var resumeTimer = null;
+
+    function stopAutoplay() {
+        $(socialsCarousel).carousel('pause');
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function () {
+            $(socialsCarousel).carousel('cycle');
+        }, RESUME_DELAY);
+    }
+
+     function stopIframePlayback(iframe) {
+        if (!iframe) return;
+        var src = iframe.src;
+        iframe.src = '';   // clearing it first guarantees the next line is a real change, not a no-op
+        iframe.src = src;
+    }
+
+    // Instagram's iframe swallows pointer events entirely once a gesture starts
+    // on it (cross-origin isolation) — so each card gets a transparent overlay
+    // that catches the gesture first, and only steps aside for taps so the
+    // click still lands on the real iframe underneath (lets play/pause work)
+    socialsCarousel.querySelectorAll('.client_content-box').forEach(function (card) {
+        card.style.position = 'relative';
+
+        var overlay = document.createElement('div');
+        overlay.style.cssText =
+            'position:absolute; top:0; left:0; width:100%; height:100%;' +
+            'z-index:5; touch-action:pan-y; cursor:grab;';
+        card.appendChild(overlay);
+
+        var startX = 0;
+        var pointerId = null;
+
+        overlay.addEventListener('pointerdown', function (e) {
+            startX = e.clientX;
+            pointerId = e.pointerId;
+            overlay.setPointerCapture(pointerId);
+        });
+
+        overlay.addEventListener('pointerup', function (e) {
+            if (e.pointerId !== pointerId) return;
+            overlay.releasePointerCapture(pointerId);
+
+            var delta = e.clientX - startX;
+
+            if (Math.abs(delta) >= SWIPE_THRESHOLD) {
+                stopAutoplay();
+                $(socialsCarousel).carousel(delta < 0 ? 'next' : 'prev');
+                return;
+            }
+
+            // a tap, not a swipe — this is the user reaching for play,
+            // so pause autoplay right here instead of guessing at it later
+            stopAutoplay();
+
+            // step aside so the browser's own click lands on Instagram's iframe,
+            // then come back for next time
+            overlay.style.pointerEvents = 'none';
+            setTimeout(function () {
+                overlay.style.pointerEvents = 'auto';
+            }, 400);
+        });
+    });
+
+    // whenever the carousel is about to change slide — auto or manual —
+    // stop whatever reel was playing on the outgoing slide before it's hidden
+    $(socialsCarousel).on('slide.bs.carousel', function () {
+        var outgoingIframe = socialsCarousel.querySelector('.carousel-item.active iframe.instagram-media');
+        stopIframePlayback(outgoingIframe);
+    });
 });

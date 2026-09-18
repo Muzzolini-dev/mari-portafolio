@@ -74,6 +74,13 @@ body {
   padding-top: 20vh;
 }
 
+.heading_container h4 {
+  font-family: "Magilio", sans-serif;
+  color: #f4b3b3;
+  text-shadow: 2px 0 #6e1313, -2px 0 #6e1313, 0 2px #6e1313, 0 -2px #6e1313,
+  2px 2px #6e1313, -2px -2px #6e1313, 2px -2px #6e1313, -2px 2px #6e1313;
+}
+
 .heading_container h2 {
   font-family: "Magilio", sans-serif;
   color: #6e1313;
@@ -308,9 +315,7 @@ body {
   padding-top: 5vh;
 }
 
-#socials {
-  padding-top: 30vh;
-}
+
 
 .about-text {
   font-size: 18px;
@@ -825,6 +830,54 @@ a:focus {
           animation: hueAnimate .7s infinite; */
 }
 
+#about .about-highlights {
+  margin-top: 180px;
+  padding-top: 40px;
+ background: #0f0000 url(../images/postpro.svg);
+      background-position: center;
+      background-size: 25%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
+
+#about .about-highlight-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border-color: #f4b3b3;
+  box-shadow: 0 0 20px rgba(244, 179, 179, 0.5);
+  overflow: hidden;
+  margin-top: 20px;
+  content-visibility: visible;
+  max-width:450px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#about .about-highlight-img img {
+  width: 100%;
+  display: block;
+}
+
+#about .about-highlight-text {
+  padding: 20px 25px;
+}
+
+#about .about-highlight-text h5 {
+  color: #031003;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#about .about-highlight-text p {
+  color: #404040;
+  margin: 0;
+}
+
 .about_section .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -895,14 +948,18 @@ a:focus {
       
 }
 
+#socials {
+  padding-top: 30vh;
+  background: #0f0000 url(../images/socials-mobile.svg);
+      background-position: center;
+      background-size: 22%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
 
-/* #gallery2 {
-      background: #0f0000 url(../images/gallery-mobile.svg) ;
-      background-position: left;
-      background-size: 17%;
-      background-repeat: space;
-      overflow: visible;
-} */
 
 .gallery_section .gallery_container {
   position: relative;
@@ -1921,6 +1978,29 @@ a:focus {
 
     #videos {
       background: #0f0000 url(../images/video-mobile.svg);
+      background-position: center;
+      background-size: 45%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+    }
+
+    #socials {
+      padding-top: 30vh;
+      background: #0f0000 url(../images/socials-mobile.svg);
+      background-position: center;
+      background-size: 42%;
+      background-repeat:repeat-y;
+      background-attachment: fixed;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      
+}
+
+    #about .about-highlights {
+      background: #0f0000 url(../images/postpro.svg);
       background-position: center;
       background-size: 45%;
       background-repeat:repeat-y;
